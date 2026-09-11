@@ -1,0 +1,7 @@
+node_modules/
+database.sqlite
+*.sqlite
+uploads/
+.env
+.env.*
+!.env.example

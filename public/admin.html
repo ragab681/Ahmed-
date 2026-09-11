@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="brand">
+            ⚡ Modern Dark
+        </div>
+
+        <div class="nav-right">
+
+            <span id="adminName">
+                Admin
+            </span>
+
+            <button
+                onclick="logout()"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+
+            <div>
+                <h1>Admin Dashboard</h1>
+
+                <p>
+                    Create and manage your posts.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="editor-card">
+
+            <h2 id="formTitle">
+                Create New Post
+            </h2>
+
+            <form id="postForm">
+
+                <input
+                    type="hidden"
+                    id="postId"
+                >
+
+                <div class="input-group">
+
+                    <label>Post Title</label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Enter post title"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Content</label>
+
+                    <textarea
+                        id="content"
+                        rows="8"
+                        placeholder="Write your post..."
+                        required
+                    ></textarea>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Post Image</label>
+
+                    <input
+                        type="file"
+                        id="image"
+                        accept="image/*"
+                    >
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Publish Post
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="secondary-btn"
+                        style="display:none"
+                    >
+                        Cancel Edit
+                    </button>
+
+                </div>
+
+                <p id="postMessage"></p>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>Your Posts</h2>
+
+                <span id="postCount">
+                    0 posts
+                </span>
+
+            </div>
+
+            <div
+                id="postsContainer"
+                class="posts-grid"
+            ></div>
+
+        </section>
+
+    </main>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
